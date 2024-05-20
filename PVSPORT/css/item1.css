@@ -1,0 +1,115 @@
+:root{
+    --primary-color:#4daf54;
+}
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh ;
+    background: linear-gradient( to right,#4daf54,#3d8888);
+}
+.card{
+    margin: 120px auto;
+    width: 400px;
+    height: 500px;
+    background: #272d40;
+    padding:20px;
+    border-radius: 15px;
+    color:white;
+    position: relative;
+}
+.card_heart, .card_cart{
+    font-size: 25px;
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+.card_cart{
+    left:unset;
+    right: 20px;    
+}
+.card_img img{
+    width:70%;
+    height: 70%;
+    padding-left: 60px;
+    object-fit: cover;
+    
+}
+
+
+.card_title, .card_price{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.card_title{
+    color: var(--primary-color);
+}
+.card_size, .card_color{
+    display:flex;
+    align-items:center;
+}
+.card_size span{
+    padding:2px 5px;
+    background: #dadada;
+    color: black;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+.card_color span{
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 0 5px;
+}
+.card_color-green{
+    background: green;
+}
+.card_color-red{
+    background: red;
+}
+.card_color-blue{
+    background: blue;
+}
+.card_action button{
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    outline: none;
+    padding:10px 20px;
+    border-radius: 5px;
+    margin: 0 5px;
+    font-weight: bold;
+}
+.card:hover .card_img{
+    transform: translateY(-90px) rotate(-20deg);
+    transition: 0,5;
+}
+.card:hover .card_title{
+    transform: rotate(-38px, -72px);
+}
+.card:hover .card_price{
+    transform: rotate(-117px, -72px);
+}
+.card_size{
+    margin-top: 150px;
+    
+}
+.card_size, .card_color, .card_action{
+    visibility:hidden;
+    opacity: 0;
+    transition: 0.5s ;
+    transition-delay: 0.5s;
+}
+.card:hover .card_size, .card:hover .card_color, .card:hover .card_action{
+    visibility:visible;
+    opacity: 100;
+    
+}
+.card:hover .card_size{
+    margin-top: -30px;
+}
+
+
