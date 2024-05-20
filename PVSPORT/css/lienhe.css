@@ -7,20 +7,24 @@ body {
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: #f0f0f0;
-    /* Thêm hình nền */
-    background-image: url('/images/logo.jpg'); /* Đường dẫn đến hình ảnh */
-    background-size: cover; /* Đảm bảo hình nền phủ toàn bộ kích thước của body */
-    background-position: center; /* Đặt hình nền vào giữa */
-    background-repeat: no-repeat; /* Không lặp lại hình nền */
+    background: linear-gradient( to right,#4daf54,#3d8888);
+
 }
 
 header {
     margin-bottom: 20px;
 }
 
+img{
+    width: 100px;
+    height: auto;
+}
+
 h1 {
     color: green;
+    text-align: center;
+    padding: auto;
+    
 }
 
 form {
