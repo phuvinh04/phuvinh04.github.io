@@ -12,6 +12,8 @@ html, body {
   font-family: 'Open Sans';
 }
 
+
+
 h1 {
   color: #fff;
   text-align: center;
@@ -85,4 +87,5 @@ a.control_next {
 }
 a:hover {
   text-size-adjust: 100%;
+  background:#58DDAF ;
 }

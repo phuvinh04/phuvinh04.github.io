@@ -34,6 +34,11 @@ footer .container .row {
 .navbar-nav {
     margin-left: auto;
 }
+.size_giay{
+    width: 100%;
+    height: 100%;
+
+}
 
 
     </style>
@@ -51,12 +56,25 @@ footer .container .row {
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="file:///C:/Users/VINH/Downloads/startbootstrap-shop-homepage-gh-pages/startbootstrap-shop-homepage-gh-pages/index.html"><i class="bi-house-door-fill"></i>Trang chủ</a></li>
                         <li class="nav-item"><a class="nav-link" href="thongtin.html">Xem thêm</a></li>
-                        <li class="nav-item"><a class="nav-link" href="dangnhap.html"><button type="button" class="btn btn-primary">Đăng nhập</button></a></li>
-                        <li class="nav-item"><a class="nav-link" href="dangky.html"><button type="button" class="btn btn-primary">Đăng ký</button></a></li>
+                        
                      
                     </ul>
                     
                 </div>
+                <!-- Form tìm kiếm -->
+                <form class="d-flex" method="GET" action="search_results.html">
+                    <input class="form-control me-2" type="search" placeholder="Tìm kiếm" aria-label="Search" name="q">
+                    <button class="btn btn-outline-dark" type="submit">Tìm kiếm</button>
+                </form>
+                
+
+                <div class="form-user">
+                    <ul>
+                        <li class="nav-item"><a class="nav-link" href="dangnhap.html"><button type="button" class="btn btn-primary">Đăng nhập</button></a></li>
+                        <li class="nav-item"><a class="nav-link" href="dangky.html"><button type="button" class="btn btn-outline-dark ">Đăng ký</button></a></li>
+                    </ul>
+                </div>
+               
             </div>
         </nav>
         <!-- Header-->
@@ -77,14 +95,14 @@ footer .container .row {
                     <div class="col mb-5">
                         <div class="card h-100">
                             <!-- Product image-->
-                            <img class="card-img-top" src="images/mizuno trang xanh cam.jpg" alt="..." />
+                            <img class="card-img-top" src="images/mizuno camdabeo.jpg" alt="..." />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Giày Đá Bóng Sân Cỏ Nhân Tạo Mizuno Morelia Neo III Pro AS TF Trắng Cam</h5>
+                                    <h5 class="fw-bolder">Mizuno Morelia Neo III Pro AS - P1GD228401 - Vàng Đen</h5>
                                     <!-- Product price-->
-                                    425.000₫ - 555.000₫
+                                    1,850,000₫
                                 </div>
                             </div>
                             <!-- Product actions-->
@@ -209,7 +227,7 @@ footer .container .row {
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem thêm thông tin</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="thongtin.html">Xem thêm thông tin</a></div>
                             </div>
                         </div>
                     </div>
@@ -239,7 +257,7 @@ footer .container .row {
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem thêm thông tin</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="thongtin.html">Xem thêm thông tin</a></div>
                             </div>
                         </div>
                     </div>
@@ -267,7 +285,7 @@ footer .container .row {
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Xem thêm thông tin</a></div>
+                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="thongtin.html">Xem thêm thông tin</a></div>
                             </div>
                         </div>
                     </div>
@@ -275,6 +293,9 @@ footer .container .row {
             </div>
         </section>
     <div class =""> </div>
+    <div>
+        <img class="size_giay" src="images/size_giay_mizuno.webp" >
+    </div>
         
        
 
@@ -283,13 +304,15 @@ footer .container .row {
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                <p class="m-0 text-white">© Your Website 2023</p>
+                <p class="m-0 text-white">© Your Website 2024</p>
             </div>
             <div class="col-md-6 text-center text-md-end">
-                <a href="https://www.facebook.com/?_rdr"><i class="bi bi-facebook text-white mx-3"></i></a>
-                <a href="#"><i class="bi bi-instagram text-white mx-3"></i></a>
-                <a href="#"><i class="bi bi-whatsapp text-white mx-3"></i></a>
+                <a href="https://www.facebook.com/profile.php?id=100022441703176"><i class="bi bi-facebook text-white mx-3">Phuvinh</i></a>
+                <a href="https://www.instagram.com/?hl=en"><i class="bi bi-instagram text-white mx-3">vinhadmw</i></a>
+                <a href="#"><i class="bi bi-whatsapp text-white mx-3"> 0353603304</i></a>
+               
             </div>
+            
         </div>
     </div>
 </footer>
@@ -299,14 +322,12 @@ footer .container .row {
 
 
 <script>
-    function myFunction() {
-    var x = document.getElementById("myDIV");
-    if (x.style.display === "none") {
-        x.style.display = "block";
-    } else {
-        x.style.display = "none";
-    }
-}
+    document.getElementById('searchForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Ngăn chặn form gửi đi theo cách mặc định
+            const searchTerm = document.getElementById('searchInput').value;
+            window.location.href = `search.html?q=${encodeURIComponent(searchTerm)}`; // Chuyển hướng đến trang kết quả tìm kiếm
+        });
+    
 </script>
        
         

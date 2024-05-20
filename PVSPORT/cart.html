@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giỏ hàng và Form đặt hàng</title>
+    <link rel="icon" type="image/x-icon" href="images/logo.jpg" />
+    <style>
+        /* CSS cho giao diện trang */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        .form-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-container input[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .form-container input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Giỏ hàng</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>Giá</th>
+                </tr>
+            </thead>
+            <tbody id="cartItems">
+                <!-- Các sản phẩm trong giỏ hàng sẽ được thêm vào đây bằng JavaScript -->
+            </tbody>
+        </table>
+
+        <div class="form-container">
+            <h2>Đặt hàng</h2>
+            <form id="orderForm">
+                <label for="name">Họ và tên:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="address">Địa chỉ:</label>
+                <input type="text" id="address" name="address" required>
+
+                <input type="submit" value="Đặt hàng">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // Đối tượng JSON giả định chứa thông tin về các sản phẩm trong giỏ hàng
+        const cartItems = [
+            { name: 'Sản phẩm 1', quantity: 2, price: 100000 },
+            { name: 'Sản phẩm 2', quantity: 1, price: 75000 }
+        ];
+
+        // Hiển thị các sản phẩm trong giỏ hàng
+        const cartItemsElement = document.getElementById('cartItems');
+        cartItems.forEach(item => {
+            const row = document.createElement('tr');
+            row.innerHTML = `
+                <td>${item.name}</td>
+                <td>${item.quantity}</td>
+                <td>${item.price.toLocaleString()} VND</td>
+            `;
+            cartItemsElement.appendChild(row);
+        });
+
+        // Xử lý sự kiện nút đặt hàng được nhấn
+        const orderForm = document.getElementById('orderForm');
+        orderForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const formData = new FormData(this);
+            const formDataObject = {};
+            formData.forEach((value, key) => {
+                formDataObject[key] = value;
+            });
+            console.log(formDataObject); // Gửi dữ liệu đặt hàng đến máy chủ hoặc xử lý dữ liệu ở đây
+            alert('Đặt hàng thành công!'); // Thông báo đặt hàng thành công
+            this.reset(); // Xóa thông tin trong form
+        });
+    </script>
+</body>
+</html>
